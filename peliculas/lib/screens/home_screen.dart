@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peliculas/screens/weather_screen.dart';
 
 import 'package:provider/provider.dart';
 
@@ -27,6 +28,41 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
+      drawer: new Drawer(
+        child: ListView(
+          children: <Widget>[
+            new UserAccountsDrawerHeader(
+              accountName: new Text("Carlos Flores"), 
+              accountEmail: new Text("carlos.flores.is@unipolidgo.edu.mx"),
+              currentAccountPicture: new CircleAvatar(
+                backgroundImage: AssetImage('assets/no-image.jpg'),
+              ),
+            ),
+            new ListTile(
+              title: new Text("Movies"),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(context, new MaterialPageRoute(
+                  builder:(BuildContext context)  => new HomeScreen())
+                );
+              },
+            ),
+            new Divider(
+              color: Color.fromARGB(255, 147, 147, 147),
+              height: 6.0,
+            ),
+            new ListTile(
+              title: new Text("Weather"),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(context, new MaterialPageRoute(
+                  builder:(BuildContext context)  => new WeatherScreen())
+                );
+              },
+            )
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -37,7 +73,7 @@ class HomeScreen extends StatelessWidget {
             // Slider de películas
             MovieSlider(
               movies: moviesProvider.popularMovies,// populares,
-              title: 'Populares', // opcional
+              title: 'Populars', // opcional
               onNextPage: () => moviesProvider.getPopularMovies(),
             ),
             
