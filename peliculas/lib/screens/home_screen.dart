@@ -19,6 +19,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('My Movies'),
         elevation: 0,
         actions: [
@@ -35,7 +36,7 @@ class HomeScreen extends StatelessWidget {
               accountName: new Text("Carlos Flores"), 
               accountEmail: new Text("carlos.flores.is@unipolidgo.edu.mx"),
               currentAccountPicture: new CircleAvatar(
-                backgroundImage: AssetImage('assets/no-image.jpg'),
+                backgroundImage: AssetImage('assets/profile.jpg'),
               ),
             ),
             new ListTile(

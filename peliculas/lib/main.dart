@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peliculas/providers/weather_provider.dart';
 import 'package:peliculas/screens/screens.dart';
 
 import 'package:provider/provider.dart';
@@ -15,6 +16,7 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: ( _ ) => MoviesProvider(), lazy: false ),
+        ChangeNotifierProvider(create: ( _ ) => WeatherProvider(), lazy: false ),
       ],
       child: MyApp(),
     );
