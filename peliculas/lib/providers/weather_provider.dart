@@ -32,7 +32,7 @@ class WeatherProvider extends ChangeNotifier {
   final response = await http.get(url);
   final Map<String, dynamic> apiDecoded = json.decode(response.body);
   
-  print(apiDecoded["location"]);
+  print(apiDecoded["current"]);
   }
 
 }
