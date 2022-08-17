@@ -30,22 +30,21 @@ class _ForecastCard extends StatelessWidget {
       child: Column(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(100),
             child: FadeInImage(
               placeholder: AssetImage("assets/no-image.jpg"), 
-              image: AssetImage("assets/profile.jpg"),
-              height: 140,
-              width: 100,
+              image: AssetImage("assets/pastialc.png"),
+              height: 125,
             ),
           ),
           SizedBox(height: 1),
           Text(
-            "Day",
+            "Friday",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
           ),
           Text(
-            "Temp",
+            "25°",
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
           )
