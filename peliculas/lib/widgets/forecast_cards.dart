@@ -7,12 +7,13 @@ class ForecastCarsd extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 30),
-      width: double.infinity,
+      width: 1,
       height: 180,
       child: ListView.builder(
-        itemCount: 4,
+        itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, int idex) => _ForecastCard(),
+        
       ),
     );
     
